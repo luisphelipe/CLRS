@@ -1,0 +1,11 @@
+{
+  "emeraldwalk.runonsave": {
+    "autoClearConsole": true,
+    "commands": [
+      {
+        "match": "\\.(c|h)$",
+        "cmd": "make && echo 25 | ./main"
+      }
+    ]
+  }
+}
