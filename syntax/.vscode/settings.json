@@ -4,7 +4,7 @@
     "commands": [
       {
         "match": "\\.(c|h)$",
-        "cmd": "make && echo 25 | ./main"
+        "cmd": "make && cat input | ./main"
       }
     ]
   }

@@ -2,6 +2,7 @@
 
 #define SIZE 5
 
+#include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -13,6 +14,8 @@ void example_variables();
 void example_arrays();
 void print_array(int *arr, int size);
 void example_strings();
+void example_shorthand_declaration();
+void other();
 
 void syntax(void) {
   example_output();
@@ -20,6 +23,8 @@ void syntax(void) {
   example_variables();
   example_arrays();
   example_strings();
+  example_shorthand_declaration();
+  other();
 }
 
 void example_output() {
@@ -67,4 +72,21 @@ void print_array(int *arr, int size) {
 void example_strings() {
   char string[] = "this is a string!";
   printf("%s\n", string);
+}
+
+void example_shorthand_declaration() {
+  int l = 1, ll = 2;
+  int a, b, c;
+  a = b = c = 99;
+  printf("l=%d ll=%d\n", l, ll);
+  printf("a=%d b=%d c=%d\n", a, b, c);
+}
+
+void other() {
+  int thernary = (1 > 2) ? 10 : 20;
+  printf("thernary=%d\n", thernary);
+  bool test = false;
+  printf("bool is %s\n", test ? "true" : "false");
+  const char *my_str = "this is my very own string literal";
+  printf("it's good practice to declare strings as const: %s\n", my_str);
 }
