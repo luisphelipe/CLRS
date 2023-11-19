@@ -10,10 +10,11 @@ typedef struct {
   int top;
 } stack;
 
-stack *INITIALIZE_STACK();
-void PRINT_STACK(stack *S, int length);
-stack *PUSH(stack *S, int val);
-stack *POP(stack *S);
+stack *STACK_INIT();
+void STACK_PRINT(stack *S, int length);
+stack *STACK_PUSH(stack *S, int val);
+int STACK_POP(stack *S);
+void STAC_FREE(stack *S);
 
 void run_stack_tests(void);
 

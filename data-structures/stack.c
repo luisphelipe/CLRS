@@ -5,7 +5,7 @@
 
 const int STACK_SIZE = 1000;
 
-stack *INITIALIZE_STACK() {
+stack *STACK_INIT() {
   stack *S = malloc(sizeof *S);
   for (int i = 0; i < STACK_SIZE; i++) {
     S->data[i] = 0;
@@ -14,7 +14,9 @@ stack *INITIALIZE_STACK() {
   return S;
 }
 
-stack *PUSH(stack *S, int val) {
+void STACK_FREE(stack *S) { free(S); }
+
+stack *STACK_PUSH(stack *S, int val) {
   int new_top = S->top + 1;
 
   if (new_top < STACK_SIZE) {
@@ -24,24 +26,26 @@ stack *PUSH(stack *S, int val) {
     // TODO: throw "overflow" error
   }
 
-  PRINT_STACK(S, 4);
+  STACK_PRINT(S, 4);
   return S;
 }
 
-stack *POP(stack *S) {
+int STACK_POP(stack *S) {
   int new_top = S->top - 1;
+  int value = 0;
 
   if (new_top >= -1) {
+    value = S->data[S->top];
     S->top = new_top;
   } else {
     // TODO: throw "underflow" error
   }
 
-  PRINT_STACK(S, 4);
-  return S;
+  STACK_PRINT(S, 4);
+  return value;
 }
 
-void PRINT_STACK(stack *S, int length) {
+void STACK_PRINT(stack *S, int length) {
   int max = length ? length : S->top;
   //   printf("printing stack with top=%d\n", S->top);
   for (int i = 0; i < max; i++) {
@@ -59,14 +63,17 @@ void PRINT_STACK(stack *S, int length) {
 void run_stack_tests(void) {
   printf("Hello Stacks!\n");
 
-  stack *S = INITIALIZE_STACK();
-  PRINT_STACK(S, 4);
-  PUSH(S, 10);
-  PUSH(S, 20);
-  PUSH(S, 30);
-  POP(S);
-  PUSH(S, 40);
-  POP(S);
-  POP(S);
-  PUSH(S, 50);
+  stack *S = STACK_INIT();
+  STACK_PRINT(S, 4);
+
+  STACK_PUSH(S, 10);
+  STACK_PUSH(S, 20);
+  STACK_PUSH(S, 30);
+  STACK_POP(S);
+  STACK_PUSH(S, 40);
+  STACK_POP(S);
+  STACK_POP(S);
+  STACK_PUSH(S, 50);
+
+  STACK_FREE(S);
 }

@@ -1,12 +1,13 @@
 # DONE
 
-- [] stack
+- [x] stack
 
 # DOING
 
+- [] testes unitarios com stack
+
 # TODO
 
-- [] testes unitarios com stack
 - [] queue
 - [] testes unitarios com queue
 - [] implementar queue com 2 stacks
