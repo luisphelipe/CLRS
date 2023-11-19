@@ -1,1 +1,4 @@
-clear && make test && ./test_stack
+#!/bin/bash
+
+./build \
+  && ./bin/gcc.debug/test_stack

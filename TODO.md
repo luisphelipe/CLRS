@@ -1,13 +1,13 @@
-# DONE - DATA STRUCTURES
+# DONE (2023-11-19)
 
-- [x] stack
 - [x] testes unitarios com stack
+- [x] add ct-cake to template
+- [x] add test suit to template
 
 # DOING
 
 # TODO
 
-- [ ] add ct-cake to template
 - [ ] queue
 - [ ] testes unitarios com queue
 - [ ] implementar queue com 2 stacks
@@ -15,8 +15,6 @@
 - [ ] exercicios leet-code de stack/queue
 
 # BACKLOG
-
-- [ ] add c-unity setup to template
 
 # TO LEARN (EVENTUALLY)
 
