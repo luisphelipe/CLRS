@@ -6,15 +6,15 @@ CC_FLAGS=-c -W -Wall -Wextra -Werror -g -Og -std=c99 -pedantic
 
 all: build
  
-build: main.o hello_world.o
-	gcc -o main main.o hello_world.o
+build: main.o stack.o
+	gcc -o main main.o stack.o
  
-main.o: main.c hello_world.h
+main.o: main.c stack.h
 	gcc -o main.o main.c ${CC_FLAGS}
  
-hello_world.o: hello_world.c hello_world.h
-	gcc -o hello_world.o hello_world.c ${CC_FLAGS}
+stack.o: stack.c stack.h
+	gcc -o stack.o stack.c ${CC_FLAGS}
  
 clean:
-	rm -rf *.o main
+	rm -rf *.o main 
 

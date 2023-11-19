@@ -15,7 +15,10 @@ void example_arrays();
 void print_array(int *arr, int size);
 void example_strings();
 void example_shorthand_declaration();
-void other();
+void example_other();
+void example_structs();
+void example_pointers();
+void example_function_pointers();
 
 void syntax(void) {
   example_output();
@@ -24,12 +27,48 @@ void syntax(void) {
   example_arrays();
   example_strings();
   example_shorthand_declaration();
-  other();
+  example_other();
+  example_pointers();
+  example_structs();
+  example_function_pointers();
 }
 
 void example_output() {
   printf("Hello World! %d\n", SIZE);
-  printf("%d %d %d\n", SUN, MON, TUE);
+  printf("\a %d %d %d\n", SUN, MON, TUE);
+  // Special characters:
+  /*
+  '\a'; // alert (bell) character
+  '\n'; // newline character
+  '\t'; // tab character (left justifies text)
+  '\v'; // vertical tab
+  '\f'; // new page (form feed)
+  '\r'; // carriage return
+  '\b'; // backspace character
+  '\0'; // NULL character. Usually put at end of strings in C.
+  //   hello\n\0. \0 used by convention to mark end of string.
+  '\\'; // backslash
+  '\?'; // question mark
+  '\''; // single quote
+  '\"'; // double quote
+  '\xhh'; // hexadecimal number. Example: '\xb' = vertical tab character
+  '\0oo'; // octal number. Example: '\013' = vertical tab character
+
+  //print formatting:
+  "%d";    // integer
+  "%3d";   // integer with minimum of length 3 digits (right justifies text)
+  "%s";    // string
+  "%f";    // float
+  "%ld";   // long
+  "%3.2f"; // minimum 3 digits left and 2 digits right decimal float
+  "%7.4s"; // (can do with strings too)
+  "%c";    // char
+  "%p";    // pointer. NOTE: need to (void *)-cast the pointer, before passing
+           //                it as an argument to `printf`.
+  "%x";    // hexadecimal
+  "%o";    // octal
+  "%%";    // prints %
+  */
 }
 
 void example_input() {
@@ -82,11 +121,31 @@ void example_shorthand_declaration() {
   printf("a=%d b=%d c=%d\n", a, b, c);
 }
 
-void other() {
+void example_other() {
   int thernary = (1 > 2) ? 10 : 20;
   printf("thernary=%d\n", thernary);
   bool test = false;
   printf("bool is %s\n", test ? "true" : "false");
-  const char *my_str = "this is my very own string literal";
+  const char *my_str = "this is my very own string literal\0";
   printf("it's good practice to declare strings as const: %s\n", my_str);
+}
+
+void example_pointers() { printf("TODO: EXAMPLE POINTERS\n"); }
+
+void example_structs() {
+  typedef struct {
+    int width;
+    int height;
+  } rect;
+
+  rect test = {1, 2};
+  printf("width=%d height=%d\n", test.width, test.height);
+
+  test.width = 10;
+  test.height = 20;
+  printf("width=%d height=%d\n", test.width, test.height);
+}
+
+void example_function_pointers() {
+  printf("TODO: EXAMPLE FUNCTION POINTERS\n");
 }
