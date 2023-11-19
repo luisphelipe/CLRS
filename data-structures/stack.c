@@ -16,7 +16,7 @@ stack *STACK_INIT() {
 
 void STACK_FREE(stack *S) { free(S); }
 
-stack *STACK_PUSH(stack *S, int val) {
+stack *_STACK_PUSH(stack *S, int val, int debug) {
   int new_top = S->top + 1;
 
   if (new_top < STACK_SIZE) {
@@ -26,24 +26,35 @@ stack *STACK_PUSH(stack *S, int val) {
     // TODO: throw "overflow" error
   }
 
-  STACK_PRINT(S, 4);
+  if (debug) {
+    STACK_PRINT(S, 4);
+  }
+
   return S;
 }
 
-int STACK_POP(stack *S) {
+stack *STACK_PUSH(stack *S, int val) { return _STACK_PUSH(S, val, 0); }
+
+int _STACK_POP(stack *S, int debug) {
   int new_top = S->top - 1;
   int value = 0;
 
   if (new_top >= -1) {
     value = S->data[S->top];
+    // S->data[S->top] = 0;
     S->top = new_top;
   } else {
     // TODO: throw "underflow" error
   }
 
-  STACK_PRINT(S, 4);
+  if (debug) {
+    STACK_PRINT(S, 4);
+  }
+
   return value;
 }
+
+int STACK_POP(stack *S) { return _STACK_POP(S, 0); }
 
 void STACK_PRINT(stack *S, int length) {
   int max = length ? length : S->top;
@@ -66,14 +77,14 @@ void run_stack_tests(void) {
   stack *S = STACK_INIT();
   STACK_PRINT(S, 4);
 
-  STACK_PUSH(S, 10);
-  STACK_PUSH(S, 20);
-  STACK_PUSH(S, 30);
-  STACK_POP(S);
-  STACK_PUSH(S, 40);
-  STACK_POP(S);
-  STACK_POP(S);
-  STACK_PUSH(S, 50);
+  _STACK_PUSH(S, 10, 1);
+  _STACK_PUSH(S, 20, 1);
+  _STACK_PUSH(S, 30, 1);
+  _STACK_POP(S, 1);
+  _STACK_PUSH(S, 40, 1);
+  _STACK_POP(S, 1);
+  _STACK_POP(S, 1);
+  _STACK_PUSH(S, 50, 1);
 
   STACK_FREE(S);
 }

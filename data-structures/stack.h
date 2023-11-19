@@ -12,9 +12,14 @@ typedef struct {
 
 stack *STACK_INIT();
 void STACK_PRINT(stack *S, int length);
+
+stack *_STACK_PUSH(stack *S, int val, int debug);
 stack *STACK_PUSH(stack *S, int val);
+
+int _STACK_POP(stack *S, int debug);
 int STACK_POP(stack *S);
-void STAC_FREE(stack *S);
+
+void STACK_FREE(stack *S);
 
 void run_stack_tests(void);
 

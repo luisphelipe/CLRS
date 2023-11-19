@@ -15,7 +15,7 @@ main.o: main.c stack.h
 test: test_stack
 
 test_stack: test_stack.o stack.o ../c-unity/unity.o
-	gcc -o test_stack test_stack.o ../c-unity/unity.o
+	gcc -o test_stack test_stack.o stack.o ../c-unity/unity.o
 
 stack.o: stack.c stack.h
 	gcc -o stack.o stack.c ${CC_FLAGS}
