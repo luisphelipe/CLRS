@@ -1,8 +1,8 @@
 # for production
-# CC_FLAGS=-c -W -Wall -Wextra -Werror -O2 -std=c99 -pedantic
+# CC_FLAGS=-c -W -Wall -Wextra -Werror -O2 -std=c17 -pedantic
 
 # for debugging
-CC_FLAGS=-c -W -Wall -Wextra -Werror -g -Og -std=c99 -pedantic
+CC_FLAGS=-c -W -Wall -Wextra -Werror -g -Og -std=c17 -pedantic
 
 all: build
  
@@ -16,5 +16,5 @@ hello_world.o: hello_world.c hello_world.h
 	gcc -o hello_world.o hello_world.c ${CC_FLAGS}
  
 clean:
-	rm -rf *.o main
+	rm *.o main
 
