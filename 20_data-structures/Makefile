@@ -1,12 +1,13 @@
-build: ./bin/main 
- 
-./bin/main ./bin/gcc.debug/test_stack:
+build ./bin/main:
 	ct-cake --auto
+
+dev: build
+	./bin/main
 
 run: ./bin/main
 	./bin/main
 
-test: ./bin/gcc.debug/test_stack
+test: build
 	./bin/gcc.debug/test_stack
  
 clean:

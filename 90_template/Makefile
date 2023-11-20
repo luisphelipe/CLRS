@@ -1,14 +1,20 @@
-build: ./bin/main 
- 
-./bin/main ./bin/gcc.debug/test:
+# build (default) 
+build ./bin/main:
 	ct-cake --auto
 
+# build and run
+dev: build
+	./bin/main
+
+# run
 run: ./bin/main
 	./bin/main
 
-test: ./bin/gcc.debug/test
+# build and test
+test: build
 	./bin/gcc.debug/test
  
+# clean
 clean:
 	rm -rf bin
 

@@ -72,7 +72,7 @@ void STACK_PRINT(stack *S, int length) {
 // END OF STACK "CLASS"
 
 void run_stack_tests(void) {
-  printf("Hello Stacks!\n");
+  printf("Starting stack basic tests\n");
 
   stack *S = STACK_INIT();
   STACK_PRINT(S, 4);
