@@ -2,12 +2,12 @@
 
 ...
 
-## file organization
+## project structure
 
-- `00_` used for dependencies/third-party libraries
-- `10_` used for general C study
-- `20_` used for CLRS study
-- `90_` used for build/config/template
+- `0*_` used for dependencies/third-party libraries
+- `1*_` used for general C study
+- `2*_` used for CLRS study
+- `9*_` used for build/config/template
 
 ## links
 
