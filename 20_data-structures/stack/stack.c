@@ -7,10 +7,12 @@ const int STACK_SIZE = 1000;
 
 stack *STACK_INIT() {
   stack *S = malloc(sizeof *S);
+  S->top = -1;
+
   for (int i = 0; i < STACK_SIZE; i++) {
     S->data[i] = 0;
   }
-  S->top = -1;
+
   return S;
 }
 

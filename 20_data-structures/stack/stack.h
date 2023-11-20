@@ -1,5 +1,5 @@
-#ifndef _H_TESTE
-#define _H_TESTE
+#ifndef _H_STACK
+#define _H_STACK
 
 // STACK "CLASS"
 extern const int STACK_SIZE;

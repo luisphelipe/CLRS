@@ -12,6 +12,7 @@ run: ./bin/main
 
 # build and test
 test: build
+	clear
 	./bin/gcc.debug/test
  
 # clean
