@@ -1,11 +1,12 @@
-# DONE (2023-11-dd)
+# DONE (2023-11-20)
+
+- [x] definição de queue com 2 stacks
 
 # DOING
 
 # TODO
 
-- [ ] implementar queue com 2 stacks
-- [ ] implementar stack com 2 queues
+- [ ] definição de stack com 2 queues
 - [ ] exercicios leet-code de stack/queue
 
 # BACKLOG
