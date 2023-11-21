@@ -7,6 +7,7 @@
 - `0*_` used for dependencies/third-party libraries
 - `1*_` used for general C study
 - `2*_` used for CLRS study
+- `7*_` used for competitive programming
 - `9*_` used for build/config/template
 
 ## links

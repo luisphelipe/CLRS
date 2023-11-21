@@ -10,7 +10,7 @@
 1. **ENQUEUE**: Add a item to the **END** of the list
 2. **DEQUEUE**: Removes the item at the **START** of the list
 
-## Building a queue with two stacks
+## (CLRS) Building a queue with two stacks
 
 How can we implement a queue with two stacks?
 
@@ -30,7 +30,7 @@ We would then, move items from B to A whenever a ENQUEUE command is called.
 
 This would make both ENQUEUE and DEQUEUE work at worst on O(N), and at best on O(1) when calling the same command more than once.
 
-Here is a example ilustrating the states of stack A and B through a series of command calls
+Here is an example ilustrating the states of stack A and B through a series of command calls
 
 ```
     ENQUEUE 1 - A: 1      B:
@@ -40,4 +40,27 @@ Here is a example ilustrating the states of stack A and B through a series of co
     ENQUEUE 4 - A: 2 3 4  B:
     DEQUEUE   - A:        B: 4 3
     DEQUEUE   - A:        B: 4
+```
+
+## (CLRS) Building a stack with two queues
+
+This would work similarly to "queue with two stacks", with the difference lying in the "REMOVE" operation
+
+PUSH would add items to queue A
+POP would move all but the last item to queue B
+
+The difference here is that we don't need to move the items again to PUSH, since the queue preserves the order, we can just start using QUEUE B as the target for new PUSH operations.
+
+This would make the time cost of PUSH O(1), and the time cost of POP O(N)
+
+Here is an example ilustrating the states of queues A and B through a series of command calls
+
+```
+    PUSH 1 - A: 1      B:
+    PUSH 2 - A: 1 2    B:
+    PUSH 3 - A: 1 2 3  B:
+    POP    - A:        B: 1 2
+    PUSH 4 - A:        B: 1 2 4
+    POP    - A: 1 2    B:
+    POP    - A:        B: 1
 ```
