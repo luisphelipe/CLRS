@@ -10,7 +10,13 @@
 - `7*_` used for competitive programming
 - `9*_` used for build/config/template
 
-## links
+## learning resources
 
-- [clib - package manager](https://github.com/clibs/clib)
-- [ct-cake - no-config build tool](https://zomojo.github.io/compiletools/)
+- [tech-interview-handbook](https://www.techinterviewhandbook.org/algorithms/study-cheatsheet/) - general guide
+- [grind-75](https://www.techinterviewhandbook.org/grind75?grouping=none&weeks=8&hours=40&mode=preferences#) - condensed leetcode problemset
+- [leetcode](https://leetcode.com/problemset/all/?page=1) - problemset
+
+## tools
+
+- [clib](https://github.com/clibs/clib) - package manager
+- [ct-cake](https://zomojo.github.io/compiletools/) - no-config build tool

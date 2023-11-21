@@ -2,6 +2,8 @@
 
 - [x] add queue
 - [x] testes unitarios com queue
+- [x] definição de queue com 2 stacks
+- [x] definição de stack com 2 queues
 
 # DONE (2023-11-19)
 
