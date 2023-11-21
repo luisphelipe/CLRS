@@ -12,9 +12,11 @@
 
 ## learning resources
 
-- [tech-interview-handbook](https://www.techinterviewhandbook.org/algorithms/study-cheatsheet/) - general guide
-- [grind-75](https://www.techinterviewhandbook.org/grind75?grouping=none&weeks=8&hours=40&mode=preferences#) - condensed leetcode problemset
-- [leetcode](https://leetcode.com/problemset/all/?page=1) - problemset
+- ★★★★★ [tech-interview-handbook](https://www.techinterviewhandbook.org/algorithms/study-cheatsheet/) - general guide
+- ★★★★★ [grind-75](https://www.techinterviewhandbook.org/grind75?grouping=none&weeks=8&hours=40&mode=preferences#) - condensed leetcode problemset
+- ★★★★★ [Algorithms Live!](https://www.youtube.com/@AlgorithmsLive/streams) - intermediate/advanced videos on algorithms for competitive programming
+- ★★★★☆ [leetcode](https://leetcode.com/problemset/all/?page=1) - problemset
+- ★★★★☆ [geeksforgeeks](https://www.geeksforgeeks.org/top-algorithms-and-data-structures-for-competitive-programming/?ref=lbp) - Top 10 Algorithms and Data Structures
 
 ## tools
 
